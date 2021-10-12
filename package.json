@@ -2,14 +2,16 @@
   "name": "speedometer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://github.com/chicomcastro/speedometer",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chicomcastro/speedometer.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/tsc",
+    "test": "yarn build && mocha --reporter spec"
   },
   "keywords": [
     "sensors",
@@ -20,5 +22,10 @@
     "signal"
   ],
   "author": "Francisco Castro <franciscommcastro@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "typescript": "^4.4.4"
+  }
 }
