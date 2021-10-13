@@ -12,10 +12,7 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "yarn build && mocha --reporter spec",
-    "version:patch": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major",
-    "publish": "yarn build && yarn test && npm publish"
+    "prepublish": "yarn test"
   },
   "keywords": [
     "sensors",

@@ -19,11 +19,9 @@ export default class Speedometer {
     const { x, y, z } = accelerometerData;
 
     // Extract each axis value and convert to m/s^2
-    const acc = [x, y, z - 1].map((component) => component * Constants.G);
-
     // Here we will consider dispositive on horizontal for simplicity
     // TODO remove (0,0,g) based on gyroscope data to consider earth-dispositive referential change
-    acc[2] -= Constants.G;
+    const acc = [x, y, z - 1].map((component) => component * Constants.G);
 
     // Append to array of values
     this.measuredData.push(acc);
