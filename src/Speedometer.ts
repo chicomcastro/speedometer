@@ -23,6 +23,8 @@ export default class Speedometer {
     // TODO remove (0,0,g) based on gyroscope data to consider earth-dispositive referential change
     const acc = [x, y, z - 1].map((component) => component * Constants.G);
 
+    // TODO calibrate
+
     // Append to array of values
     this.measuredData.push(acc);
     if (this.measuredData.length >= 10) {
