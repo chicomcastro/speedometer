@@ -26,6 +26,8 @@ export default class Speedometer {
     if (this.measuredData.length >= 10) {
       this.measuredData = this.measuredData.slice(1);
     }
+
+    // Accelerations
     const axArray = this.measuredData.map((e) => e[0]);
     const ayArray = this.measuredData.map((e) => e[1]);
     const azArray = this.measuredData.map((e) => e[2]);
@@ -40,7 +42,7 @@ export default class Speedometer {
       z: azMean,
     };
 
-    // Velocidades
+    // Velocities
     const vxArray = MathUtils.integrate(
       axArray,
       this.updateIntervalMilliseconds / 1000
