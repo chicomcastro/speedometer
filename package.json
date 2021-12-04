@@ -4,10 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/chicomcastro/speedometer",
+  "homepage": "https://github.com/chicomcastro/speedometer-engine",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chicomcastro/speedometer.git"
+    "url": "git+https://github.com/chicomcastro/speedometer-engine.git"
   },
   "scripts": {
     "build": "./node_modules/.bin/tsc",
